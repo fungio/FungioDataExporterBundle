@@ -1,0 +1,8 @@
+parameters:
+    ee.dataexporter.class: EE\DataExporterBundle\Service\DataExporter
+
+services:
+    ee.dataexporter:
+        class: %ee.dataexporter.class%
+        public: true
+        scope: prototype
