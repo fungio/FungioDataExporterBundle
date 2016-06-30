@@ -5,6 +5,12 @@ namespace Fungio\DataExporterBundle\Test\Service;
 use Fungio\DataExporterBundle\Service\DataExporter;
 use Fungio\DataExporterBundle\Tests\TestObject;
 
+/**
+ * Class DataExporterTest
+ * @package Fungio\DataExporterBundle\Test\Service
+ *
+ * @author Pierrick AUBIN <pierrick.aubin@gmail.com>
+ */
 class DataExporterTest extends \PHPUnit_Framework_TestCase
 {
     public function testCSVExport()

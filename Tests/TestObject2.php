@@ -2,6 +2,12 @@
 
 namespace Fungio\DataExporterBundle\Tests;
 
+/**
+ * Class TestObject2
+ * @package Fungio\DataExporterBundle\Tests
+ *
+ * @author Pierrick AUBIN <pierrick.aubin@gmail.com>
+ */
 class TestObject2
 {
     private $col1;

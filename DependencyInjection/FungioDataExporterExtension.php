@@ -7,6 +7,12 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
+/**
+ * Class FungioDataExporterExtension
+ * @package Fungio\DataExporterBundle\DependencyInjection
+ *
+ * @author Pierrick AUBIN <pierrick.aubin@gmail.com>
+ */
 class FungioDataExporterExtension extends Extension
 {
     /**

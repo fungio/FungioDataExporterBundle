@@ -6,9 +6,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 
 /**
- * @author  Piotr Antosik <mail@piotrantosik.com>
- * @author  Pierrick AUBIN <pierrick.aubin@gmail.com>
- * @version 0.4.2
+ * Class DataExporter
+ * @package Fungio\DataExporterBundle\Service
+ *
+ * @author Pierrick AUBIN <pierrick.aubin@gmail.com>
  */
 class DataExporter
 {
@@ -16,42 +17,52 @@ class DataExporter
      * @var array
      */
     protected $columns;
+
     /**
      * @var array
      */
     protected $data;
+
     /**
      * @var string
      */
     protected $format;
+
     /**
      * @var string
      */
     protected $separator;
+
     /**
      * @var string
      */
     protected $escape;
+
     /**
      * @var string
      */
     protected $fileName;
+
     /**
      * @var boolean
      */
     protected $memory;
+
     /**
      * @var boolean
      */
     protected $skipHeader;
+
     /**
      * @var string
      */
     protected $charset;
+
     /**
      * @var array
      */
     protected $supportedFormat = array('csv', 'xls', 'html', 'xml', 'json');
+
     /**
      * @var array
      */
@@ -413,9 +424,7 @@ class DataExporter
     }
 
     /**
-     * @param array $option
-     *
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return string|Response
      */
     public function render()
     {

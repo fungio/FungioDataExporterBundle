@@ -4,6 +4,12 @@ namespace Fungio\DataExporterBundle\Tests;
 
 use Fungio\DataExporterBundle\Tests\TestObject2;
 
+/**
+ * Class TestObject
+ * @package Fungio\DataExporterBundle\Tests
+ *
+ * @author Pierrick AUBIN <pierrick.aubin@gmail.com>
+ */
 class TestObject
 {
     private $col1;

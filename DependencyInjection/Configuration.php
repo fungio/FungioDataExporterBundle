@@ -5,6 +5,12 @@ namespace Fungio\DataExporterBundle\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
+/**
+ * Class Configuration
+ * @package Fungio\DataExporterBundle\DependencyInjection
+ *
+ * @author Pierrick AUBIN <pierrick.aubin@gmail.com>
+ */
 class Configuration implements ConfigurationInterface
 {
     /**
