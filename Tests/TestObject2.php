@@ -1,6 +1,6 @@
 <?php
 
-namespace EE\DataExporterBundle\Tests;
+namespace Fungio\DataExporterBundle\Tests;
 
 class TestObject2
 {

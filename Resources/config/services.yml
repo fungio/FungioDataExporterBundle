@@ -1,8 +1,8 @@
 parameters:
-    ee.dataexporter.class: EE\DataExporterBundle\Service\DataExporter
+    fungio.dataexporter.class: Fungio\DataExporterBundle\Service\DataExporter
 
 services:
-    ee.dataexporter:
-        class: %ee.dataexporter.class%
+    fungio.dataexporter:
+        class: %fungio.dataexporter.class%
         public: true
         scope: prototype

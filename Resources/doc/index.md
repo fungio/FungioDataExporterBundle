@@ -1,15 +1,13 @@
-EEDataExporter
+FungioDataExporter
 -------------
-
-[![Build Status](https://api.travis-ci.org/Antek88/DataExporter.png?branch=master)](http://travis-ci.org/Antek88/DataExporter)
 
 ## Installation
 
-### Download EEDataExporterBundle using composer
+### Download FungioDataExporterBundle using composer
 ```js
 {
     "require": {
-        "ee/dataexporter-bundle": "*"
+        "fungio/dataexporter-bundle": "*"
     }
 }
 ```
@@ -19,7 +17,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new EE\DataExporterBundle\EEDataExporterBundle(),
+        new Fungio\DataExporterBundle\FungioDataExporterBundle(),
     );
 }
 ```
@@ -39,7 +37,7 @@ col1 is equals with $object->getCol1(), hasCol1(), isCol1(), $object->col1 or ma
 
 ### Render to memory
 Maybe sometime you a need render data to variable.
-EEDataExporter support this. You must set parameter `memory` into setOption eg.:
+FungioDataExporter support this. You must set parameter `memory` into setOption eg.:
 ```php
 $exporter->setOptions('csv', array('fileName' => 'file', 'separator' => ';', 'memory'));
 //set data...
@@ -58,11 +56,11 @@ Our exporter support this! Just use the function addHook.
 addHook expected two or one parameters.
  - first parameter is a function (object) that we want use, second is a column name, eg.:
 ```php
-$exporter->addHook(array('EE\DataExporterBundle\Test\Service\DataExporterTest', 'hookTest'), '[col1]');
+$exporter->addHook(array('Fungio\DataExporterBundle\Test\Service\DataExporterTest', 'hookTest'), '[col1]');
 $exporter->addHook(array(&$this, 'hookTest2'), '[col3]');
 ```
 
- - EEDataExporter support closure as parameter eg.:
+ - FungioDataExporter support closure as parameter eg.:
 ```php
 $f = function($parm){
         if ($parm instanceof \DateTime) {
@@ -84,7 +82,7 @@ It is possible to set multiple hooks on multiple columns, but only one for each 
 ### Usage example from array:
 
 ```php
-$exporter = $this->get('ee.dataexporter');
+$exporter = $this->get('fungio.dataexporter');
 $exporter->setOptions('csv', array('fileName' => 'file', 'separator' => ';'));
 $exporter->setColumns(array('[col1]', '[col2]', '[col3]'));
 $exporter->setData(array(
@@ -98,7 +96,7 @@ return $exporter->render();
 ### And from object:
 
 ```php
-$exporter = $this->get('ee.dataexporter');
+$exporter = $this->get('fungio.dataexporter');
 $testObject = new TestObject();
 
 $exporter->setOptions('xls', array('fileName' => 'file'));

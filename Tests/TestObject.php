@@ -1,8 +1,8 @@
 <?php
 
-namespace EE\DataExporterBundle\Tests;
+namespace Fungio\DataExporterBundle\Tests;
 
-use EE\DataExporterBundle\Tests\TestObject2;
+use Fungio\DataExporterBundle\Tests\TestObject2;
 
 class TestObject
 {

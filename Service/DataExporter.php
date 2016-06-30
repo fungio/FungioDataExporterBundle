@@ -1,12 +1,13 @@
 <?php
 
-namespace EE\DataExporterBundle\Service;
+namespace Fungio\DataExporterBundle\Service;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 
 /**
  * @author  Piotr Antosik <mail@piotrantosik.com>
+ * @author  Pierrick AUBIN <pierrick.aubin@gmail.com>
  * @version 0.4.2
  */
 class DataExporter
@@ -143,7 +144,7 @@ class DataExporter
      */
     public function openXLS()
     {
-        $this->data = "<!DOCTYPE ><html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=" . $this->charset . "\" /><meta name=\"ProgId\" content=\"Excel.Sheet\"><meta name=\"Generator\" content=\"https://github.com/EE/DataExporter\"></head><body><table>";
+        $this->data = "<!DOCTYPE ><html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=" . $this->charset . "\" /><meta name=\"ProgId\" content=\"Excel.Sheet\"><meta name=\"Generator\" content=\"https://github.com/fungio/DataExporter\"></head><body><table>";
 
         return $this;
     }
@@ -163,7 +164,7 @@ class DataExporter
      */
     public function openHTML()
     {
-        $this->data = "<!DOCTYPE ><html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=" . $this->charset . "\" /><meta name=\"Generator\" content=\"https://github.com/EE/DataExporter\"></head><body><table>";
+        $this->data = "<!DOCTYPE ><html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=" . $this->charset . "\" /><meta name=\"Generator\" content=\"https://github.com/fungio/DataExporter\"></head><body><table>";
 
         return $this;
     }

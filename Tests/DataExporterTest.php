@@ -1,9 +1,9 @@
 <?php
 
-namespace EE\DataExporterBundle\Test\Service;
+namespace Fungio\DataExporterBundle\Test\Service;
 
-use EE\DataExporterBundle\Service\DataExporter;
-use EE\DataExporterBundle\Tests\TestObject;
+use Fungio\DataExporterBundle\Service\DataExporter;
+use Fungio\DataExporterBundle\Tests\TestObject;
 
 class DataExporterTest extends \PHPUnit_Framework_TestCase
 {
@@ -36,7 +36,7 @@ class DataExporterTest extends \PHPUnit_Framework_TestCase
             )
         );
 
-        $result = '<!DOCTYPE ><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="ProgId" content="Excel.Sheet"><meta name="Generator" content="https://github.com/EE/DataExporter"></head><body><table><tr><td>[col1]</td><td>[col2]</td><td>[col3]</td></tr><tr><td>1a</td><td>1b</td><td>1c</td></tr><tr><td>2a</td><td>2b</td><td></td></tr></table></body></html>';
+        $result = '<!DOCTYPE ><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="ProgId" content="Excel.Sheet"><meta name="Generator" content="https://github.com/fungio/DataExporter"></head><body><table><tr><td>[col1]</td><td>[col2]</td><td>[col3]</td></tr><tr><td>1a</td><td>1b</td><td>1c</td></tr><tr><td>2a</td><td>2b</td><td></td></tr></table></body></html>';
 
         $this->assertEquals($result, $exporter->render()->getContent());
     }
@@ -64,7 +64,7 @@ class DataExporterTest extends \PHPUnit_Framework_TestCase
         $exporter->setColumns(array('col1' => 'Label1', 'col2' => 'Label2', 'col3.col1' => 'From object two'));
         $exporter->setData(array($testObject));
 
-        $result = '<!DOCTYPE ><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="ProgId" content="Excel.Sheet"><meta name="Generator" content="https://github.com/EE/DataExporter"></head><body><table><tr><td>Label1</td><td>Label2</td><td>From object two</td></tr><tr><td>1a</td><td>1b</td><td>Object two</td></tr></table></body></html>';
+        $result = '<!DOCTYPE ><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="ProgId" content="Excel.Sheet"><meta name="Generator" content="https://github.com/fungio/DataExporter"></head><body><table><tr><td>Label1</td><td>Label2</td><td>From object two</td></tr><tr><td>1a</td><td>1b</td><td>Object two</td></tr></table></body></html>';
 
         $this->assertEquals($result, $exporter->render()->getContent());
     }
@@ -81,7 +81,7 @@ class DataExporterTest extends \PHPUnit_Framework_TestCase
             )
         );
 
-        $result = '<!DOCTYPE ><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="Generator" content="https://github.com/EE/DataExporter"></head><body><table><tr><td>Column 1</td><td>Column 2</td><td>Column 3</td></tr><tr><td>1a</td><td>1b</td><td>1c</td></tr><tr><td>2a</td><td>2b</td><td></td></tr></table></body></html>';
+        $result = '<!DOCTYPE ><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="Generator" content="https://github.com/fungio/DataExporter"></head><body><table><tr><td>Column 1</td><td>Column 2</td><td>Column 3</td></tr><tr><td>1a</td><td>1b</td><td>1c</td></tr><tr><td>2a</td><td>2b</td><td></td></tr></table></body></html>';
 
         $this->assertEquals($result, $exporter->render()->getContent());
     }
@@ -148,7 +148,7 @@ class DataExporterTest extends \PHPUnit_Framework_TestCase
         $exporter = new DataExporter();
         $exporter->setOptions('json', array('fileName' => 'file'));
         $exporter->setColumns(array('[col1]', '[col2]', '[col3]'));
-        $exporter->addHook(array('EE\DataExporterBundle\Test\Service\DataExporterTest', 'hookTest'), '[col1]');
+        $exporter->addHook(array('Fungio\DataExporterBundle\Test\Service\DataExporterTest', 'hookTest'), '[col1]');
         $exporter->addHook(array(&$this, 'hookTest2'), '[col3]');
         $exporter->setData(
             array(
@@ -240,7 +240,7 @@ class DataExporterTest extends \PHPUnit_Framework_TestCase
         $exporter = new DataExporter();
         $exporter->setOptions('json', array('fileName' => 'file'));
         $exporter->setColumns(array('[col1]', '[col2]', '[col3]'));
-        $exporter->addHook(array('EE\DataExporterBundle\Test\Service\DataExporterTest'), '[col1]');
+        $exporter->addHook(array('Fungio\DataExporterBundle\Test\Service\DataExporterTest'), '[col1]');
     }
 
     /**
@@ -251,7 +251,7 @@ class DataExporterTest extends \PHPUnit_Framework_TestCase
         $exporter = new DataExporter();
         $exporter->setOptions('json', array('fileName' => 'file'));
         $exporter->setColumns(array('[col1]', '[col2]', '[col3]'));
-        $exporter->addHook(array('EE\DataExporterBundle\Test\Service\DataExporterTest', 'hookTest'), '[colNonExist]');
+        $exporter->addHook(array('Fungio\DataExporterBundle\Test\Service\DataExporterTest', 'hookTest'), '[colNonExist]');
     }
 
     /**
@@ -262,7 +262,7 @@ class DataExporterTest extends \PHPUnit_Framework_TestCase
         $exporter = new DataExporter();
         $exporter->setOptions('json', array('fileName' => 'file'));
         $exporter->setColumns(array('[col1]', '[col2]', '[col3]'));
-        $exporter->addHook(array('EE\DataExporterBundle\Test\Service\DataExporterTest', 'hookTestNon'), '[col1]');
+        $exporter->addHook(array('Fungio\DataExporterBundle\Test\Service\DataExporterTest', 'hookTestNon'), '[col1]');
     }
 
     /**

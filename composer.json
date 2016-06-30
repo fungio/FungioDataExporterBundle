@@ -1,9 +1,8 @@
 {
-    "name": "ee/dataexporter-bundle",
+    "name": "fungio/dataexporter-bundle",
     "type": "symfony-bundle",
     "description": "Easy export data to CSV, XML, HTML, JSON or XLS",
     "keywords": ["exporter","csv","xls", "xml", "json"],
-    "homepage": "http://laboratorium.ee",
     "license": "MIT",
     "authors": [
         {
@@ -14,7 +13,7 @@
         },
         {
             "name": "Pierrick AUBIN",
-            "email": "pierrick.aubin@siqual.fr",
+            "email": "pierrick.aubin@gmail.com",
             "role": "Developer"
         }
     ],
@@ -29,9 +28,9 @@
         "symfony/yaml": "~2.1"
     },
     "autoload": {
-        "psr-0": { "EE\\DataExporterBundle": "" }
+        "psr-0": { "Fungio\\DataExporterBundle": "" }
     },
-    "target-dir": "EE/DataExporterBundle",
+    "target-dir": "Fungio/DataExporterBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "3.1-dev"

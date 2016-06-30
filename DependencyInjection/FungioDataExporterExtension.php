@@ -1,13 +1,13 @@
 <?php
 
-namespace EE\DataExporterBundle\DependencyInjection;
+namespace Fungio\DataExporterBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
-class EEDataExporterExtension extends Extension
+class FungioDataExporterExtension extends Extension
 {
     /**
      * {@inheritDoc}

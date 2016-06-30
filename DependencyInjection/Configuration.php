@@ -1,6 +1,6 @@
 <?php
 
-namespace EE\DataExporterBundle\DependencyInjection;
+namespace Fungio\DataExporterBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -13,7 +13,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode    = $treeBuilder->root('eedata_exporter');
+        $rootNode    = $treeBuilder->root('fungio_data_exporter');
 
         return $treeBuilder;
     }
