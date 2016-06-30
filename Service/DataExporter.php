@@ -296,7 +296,7 @@ class DataExporter
             throw new \RuntimeException('First use setColumns to set columns to export!');
         }
 
-        $accessor = PropertyAccess::getPropertyAccessor();
+        $accessor = PropertyAccess::createPropertyAccessor();
         $separator = $this->separator;
         $escape = $this->escape;
         $hooks = $this->hooks;
