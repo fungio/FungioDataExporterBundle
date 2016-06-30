@@ -1,4 +1,4 @@
-FungioDataExporter
+FungioDataExporterBundle
 -------------
 Easy export data to CSV, XML, JSON, Excel, HTML file or into memory.
 
