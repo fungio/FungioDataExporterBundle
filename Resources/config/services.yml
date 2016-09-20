@@ -5,4 +5,4 @@ services:
     fungio.dataexporter:
         class: %fungio.dataexporter.class%
         public: true
-        scope: prototype
+        shared: false
