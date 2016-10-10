@@ -61,12 +61,12 @@ class DataExporter
     /**
      * @var array
      */
-    protected $supportedFormat = array('csv', 'xls', 'html', 'xml', 'json');
+    protected $supportedFormat = ['csv', 'xls', 'html', 'xml', 'json'];
 
     /**
      * @var array
      */
-    protected $hooks = array();
+    protected $hooks = [];
 
     /**
      * @param $format
@@ -74,7 +74,7 @@ class DataExporter
      * @return $this
      * @throws \RuntimeException
      */
-    public function setOptions($format, $options = array())
+    public function setOptions($format, $options = [])
     {
         if (!in_array(strtolower($format), $this->supportedFormat)) {
             throw new \RuntimeException(sprintf('The format %s is not supported', $format));
@@ -88,7 +88,7 @@ class DataExporter
             //options for csv
             array_key_exists('separator', $options) ? $this->separator = $options['separator'] : $this->separator = ',';
             array_key_exists('escape', $options) ? $this->escape = $options['escape'] : '\\';
-            $this->data = array();
+            $this->data = [];
         } elseif ('xls' === $this->format) {
             //options for xls
             $this->openXLS();
@@ -276,7 +276,7 @@ class DataExporter
                 ));
             }
 
-            $this->hooks[$column] = array($function[0], $function[1]);
+            $this->hooks[$column] = [$function[0], $function[1]];
         }
 
         return $this;
@@ -306,7 +306,7 @@ class DataExporter
             switch ($this->format) {
                 case 'csv':
                 case 'json':
-                    $tempRow = array();
+                    $tempRow = [];
                     break;
                 case 'xls':
                 case 'html':

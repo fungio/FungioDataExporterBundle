@@ -15,10 +15,10 @@ FungioDataExporter
 ```php
 public function registerBundles()
 {
-    $bundles = array(
+    $bundles = [
         // ...
         new Fungio\DataExporterBundle\FungioDataExporterBundle(),
-    );
+    ];
 }
 ```
 
@@ -39,7 +39,7 @@ col1 is equals with $object->getCol1(), hasCol1(), isCol1(), $object->col1 or ma
 Maybe sometime you a need render data to variable.
 FungioDataExporter support this. You must set parameter `memory` into setOption eg.:
 ```php
-$exporter->setOptions('csv', array('fileName' => 'file', 'separator' => ';', 'memory'));
+$exporter->setOptions('csv', ['fileName' => 'file', 'separator' => ';', 'memory']);
 //set data...
 $var = $exporter->render();
 ```
@@ -47,7 +47,7 @@ $var = $exporter->render();
 ### Skip header in CSV format
 If you want skip columns name in CSV format use flag skip_header in setOptions eg.:
 ```php
-$exporter->setOptions('csv', array('fileName' => 'file', 'separator' => ';', 'memory', 'skip_header'));
+$exporter->setOptions('csv', ['fileName' => 'file', 'separator' => ';', 'memory', 'skip_header']);
 ```
 
 ### Hook a column
@@ -56,8 +56,8 @@ Our exporter support this! Just use the function addHook.
 addHook expected two or one parameters.
  - first parameter is a function (object) that we want use, second is a column name, eg.:
 ```php
-$exporter->addHook(array('Fungio\DataExporterBundle\Test\Service\DataExporterTest', 'hookTest'), '[col1]');
-$exporter->addHook(array(&$this, 'hookTest2'), '[col3]');
+$exporter->addHook(['Fungio\DataExporterBundle\Test\Service\DataExporterTest', 'hookTest'], '[col1]');
+$exporter->addHook([&$this, 'hookTest2'], '[col3]');
 ```
 
  - FungioDataExporter support closure as parameter eg.:
@@ -83,12 +83,12 @@ It is possible to set multiple hooks on multiple columns, but only one for each 
 
 ```php
 $exporter = $this->get('fungio.dataexporter');
-$exporter->setOptions('csv', array('fileName' => 'file', 'separator' => ';'));
-$exporter->setColumns(array('[col1]', '[col2]', '[col3]'));
-$exporter->setData(array(
-        array('col1' => '1a', 'col2' => '1b', 'col3' => '1c'),
-        array('col1' => '2a', 'col2' => '2b'),
-    ));
+$exporter->setOptions('csv', ['fileName' => 'file', 'separator' => ';']);
+$exporter->setColumns(['[col1]', '[col2]', '[col3]']);
+$exporter->setData([
+        ['col1' => '1a', 'col2' => '1b', 'col3' => '1c'],
+        ['col1' => '2a', 'col2' => '2b'],
+    ]);
 
 return $exporter->render();
 ```
@@ -99,9 +99,9 @@ return $exporter->render();
 $exporter = $this->get('fungio.dataexporter');
 $testObject = new TestObject();
 
-$exporter->setOptions('xls', array('fileName' => 'file'));
-$exporter->setColumns(array('col1' => 'Label1', 'col2' => 'Label2', 'col3.col1' => 'From object two'));
-$exporter->setData(array($testObject));
+$exporter->setOptions('xls', ['fileName' => 'file']);
+$exporter->setColumns(['col1' => 'Label1', 'col2' => 'Label2', 'col3.col1' => 'From object two']);
+$exporter->setData([$testObject]);
 
 class TestObject
 {
