@@ -3,6 +3,6 @@ parameters:
 
 services:
     fungio.dataexporter:
-        class: %fungio.dataexporter.class%
+        class: "%fungio.dataexporter.class%"
         public: true
         shared: false
