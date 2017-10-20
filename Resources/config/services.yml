@@ -6,3 +6,5 @@ services:
         class: "%fungio.dataexporter.class%"
         public: true
         shared: false
+        arguments:
+          - '@phpexcel'

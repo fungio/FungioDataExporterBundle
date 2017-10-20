@@ -11,13 +11,14 @@ FungioDataExporter
     }
 }
 ```
-### Enable the bundle in the kernel
+### Enable the bundles in the kernel
 ```php
 public function registerBundles()
 {
     $bundles = [
         // ...
         new Fungio\DataExporterBundle\FungioDataExporterBundle(),
+        new Liuggio\ExcelBundle\LiuggioExcelBundle(),
     ];
 }
 ```
