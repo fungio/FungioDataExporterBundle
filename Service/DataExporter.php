@@ -108,10 +108,9 @@ class DataExporter
         }
 
         //skip header
-        in_array(
-            'skip_header',
-            $options
-        ) ? $this->skipHeader = true : false;
+        if (in_array('skip_header', $options) || (array_key_exists('skip_header', $options) && $options['skip_header'])) {
+            $this->skipHeader = true;
+        }
 
         return $this;
     }
