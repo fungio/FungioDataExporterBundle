@@ -21,7 +21,7 @@
     "require": {
         "php": ">=5.6.0",
         "symfony/http-foundation": "~3.0|~4.0",
-        "fungio/ExcelBundle": "dev-master"
+        "fungio/excelbundle": "v2.1.*"
     },
     "require-dev": {
         "symfony/yaml": "~2.1"
