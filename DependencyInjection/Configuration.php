@@ -18,8 +18,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('fungio_data_exporter');
-        $rootNode    = $treeBuilder->getRootNode();
+        $treeBuilder = new TreeBuilder();
+        $rootNode    = $treeBuilder->root('fungio_data_exporter');
 
         return $treeBuilder;
     }
