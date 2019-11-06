@@ -29,5 +29,10 @@
     "autoload": {
         "psr-0": { "Fungio\\DataExporterBundle": "" }
     },
-    "target-dir": "Fungio/DataExporterBundle"
+    "target-dir": "Fungio/DataExporterBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.3.x-dev"
+        }
+    }
 }
