@@ -2,7 +2,7 @@
 
 namespace Fungio\DataExporterBundle\Service;
 
-use Fungio\ExcelBundle\Factory;
+use Liuggio\ExcelBundle\Factory;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
