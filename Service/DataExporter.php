@@ -53,7 +53,7 @@ class DataExporter
     /**
      * @var array
      */
-    protected $supportedFormat = ['csv', 'xls', 'html', 'json'];
+    protected $supportedFormat = ['csv', 'xls', 'xlsx', 'html', 'json'];
 
     /**
      * @var Factory
