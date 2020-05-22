@@ -201,6 +201,9 @@ class DataExporter
             case 'xls':
                 $writer = $this->phpExcel->createWriter($phpExcelObject, 'Excel5');
                 break;
+            case 'xlsx':
+                $writer = $this->phpExcel->createWriter($phpExcelObject, 'Excel2007');
+                break;
             case 'html':
                 $writer = $this->phpExcel->createWriter($phpExcelObject, 'HTML');
                 break;
